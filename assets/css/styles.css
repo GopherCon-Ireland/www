@@ -1,0 +1,369 @@
+@font-face {
+    font-family: "Space Comics";
+    src: url("/assets/fonts/SpaceComics.ttf");
+}
+
+*, html {
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: block;
+    position: relative;
+    background-image: url("/assets/images/hero.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: clip;
+    background-color: #5C674D;
+    height: 1000px;
+    z-index: -10;
+}
+
+.header_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner {
+    top: 42px;
+    position: relative;
+    z-index: 99;
+}
+
+.streams {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.hills {
+    position: absolute;
+    top: auto;
+    bottom: -5px;
+    width: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.skyline {
+    position: absolute;
+    top: auto;
+    bottom: -5px;
+    width: 100%;
+    z-index: 3;
+}
+
+.clovers {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    z-index: 5;
+    margin: 0;
+    padding: 0;
+}
+.clovers_green{
+    display: flex;
+    justify-content: space-between;
+}
+.clovers_green_left {
+    position: relative;
+    z-index: 7;
+    left: 0;
+    top: auto;
+    bottom: 0;
+    width: 500px;
+    height: 500px;
+}
+
+.clovers_green_right {
+    position: relative;
+    z-index: 8;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    width: 500px;
+    height: 500px;
+}
+
+.logo {
+    width: 100vw;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    top: auto;
+    bottom: 0;
+    z-index: 10;
+}
+
+
+.star{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: visible;
+    z-index: 10;
+    top: auto;
+    bottom: -50px;
+}
+
+.gopher {
+    position: absolute;
+    overflow: visible;
+    width: 100%;
+    height: 1vh;
+    text-align: center;
+    top: 300px;
+    bottom: 0;
+    z-index: 15;
+}
+
+.newsletter {
+    display: block;
+    position: relative;
+    background-color: #244638;
+    min-height: 600px;
+    padding-bottom: 250px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.speakers {
+    display: block;
+    position: relative;
+    background-color: #5C674D;
+    min-height: 900px;
+}
+
+.banner_sub_text {
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    top: 260px;
+    z-index: 50;
+}
+
+.ireland {
+    position: relative;
+    color: #FFFEE6;
+    font-family: "Space Comics", sans-serif;
+    font-size: 2.4rem;
+    letter-spacing: 4px;
+}
+
+.date {
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    text-align: center;
+    color: #FFFEE6;
+    font-size: 2rem;
+    margin-top: 20px;
+    z-index: 5;
+}
+
+.section_content {
+    top: 50px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.section_heading {
+    padding: 20px;
+    position: relative;
+    font-family: "Space Comics", sans-serif;
+    font-size: 1.8rem;
+    color: #FFFEE6;
+    max-width: 800px;
+    line-height: 2em;
+    letter-spacing: 5px;
+    margin: 0 auto;
+}
+
+.section_text {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    color: #FFFEE6;
+    max-width: 800px;
+    line-height: 1.5em;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sponsors {
+    display: block;
+    position: relative;
+    background-color: #244638;
+    min-height: 800px;
+    padding-bottom: 200px;
+}
+
+.sponsors_levels {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: #9FCF33;
+    line-height: 1em;
+
+}
+
+.sponsors_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 42px;
+}
+
+.gold, .silver, .bronze {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.clover_left {
+    position: absolute;
+    left: -5px;
+    right: auto;
+}
+
+.clover_right {
+    position: absolute;
+    right: 0;
+    left: auto;
+}
+
+.clover_right_white {
+    position: absolute;
+    top: -150px;
+    right: 0;
+    left: auto;
+    z-index: 2;
+}
+
+.clover_right_white_bottom {
+    position: absolute;
+    top: auto;
+    bottom: -100px;
+    left: 0;
+    z-index: 99;
+    overflow: visible;
+}
+
+.tophat {
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: auto;
+    bottom: 0;
+}
+
+.pigtails {
+    position: absolute;
+    left: 0;
+    top: auto;
+    bottom: 0;
+}
+
+.clover_top_right {
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 0;
+    bottom: auto;
+}
+
+.subscribe {
+    position: relative;
+    background: #E28E33;
+    color: #FFFEE6;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    z-index: 12;
+}
+
+.enter_email {
+    position: relative;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 1em;
+    padding: 10px;
+    z-index: 12;
+}
+
+footer {
+    display: block;
+    position: relative;
+    background-color: #2E2D2C;
+    min-height: 250px;
+    background-image: url("/assets/images/skyline.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 20vh;
+    background-position: bottom;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        height: 600px;
+    }
+
+    .gopher {
+        top: 190px;
+    }
+
+    .enter_email {
+        width: 90%;
+    }
+
+    .banner_sub_text {
+        top: 180px
+    }
+
+    .clover_left {
+        visibility: hidden;
+    }
+
+    .clovers_green_left {
+        visibility: hidden;
+    }
+
+    .clovers_green_right {
+        visibility: hidden;
+    }
+
+    .pigtails {
+        visibility: hidden;
+        left: -1000px;
+    }
+
+    .sponsors {
+        min-height: 400px;
+    }
+}
