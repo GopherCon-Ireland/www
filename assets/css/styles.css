@@ -396,6 +396,10 @@ textarea {
     justify-content: center;
 }
 
+.sponsors_group > a {
+    margin-right: 30px;
+}
+
 footer {
     display: block;
     position: relative;
