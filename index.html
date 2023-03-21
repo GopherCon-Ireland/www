@@ -49,6 +49,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/styles.css">
+
     </head>
     <body>
         <header>
@@ -63,7 +64,7 @@
                 </div>
                 <div class="banner_sub_text">
                     <div class="ireland">IRELAND</div>
-                    <div class="date">Dublin, Nov 2023</div>
+                    <div class="date">Dublin, 4<sup>th</sup> Nov 2023</div>
                 </div>
                 <div class="logo">
                     <picture class="star">
@@ -153,12 +154,41 @@
                     <img src="assets/images/Gopher_001.png" alt="">
                 </picture>
             </div>
-            <div class="section_content">
+            <div class="speaker_content">
                 <h2 class="section_heading">CALL FOR SPEAKERS</h2>
                 <div class="section_text">
-                    <p>
-                        Call for speakers opening soon!
-                    </p>
+                    <form id="submitTalk" method="POST" action="https://dbs6o2h9wb.execute-api.eu-west-1.amazonaws.com/Prod/talk">
+
+                        <div class="t2">
+                            <div class="t"><input type="text" name="name" placeholder="name"></div>
+                            <div class="t"><input type="email" name="email" placeholder="email"></div>
+                        </div>
+
+                        <div class="t3">
+                            <div class="t"><input type="text" name="title" placeholder="talk title"></div>
+                        </div>
+
+                        <div class="t2">
+                            <textarea name="description" placeholder="talk description"></textarea>
+                        </div>
+                        <div class="t2">
+                            <textarea name="previousTalks" placeholder="details of previous talks"></textarea>
+                        </div>
+                        <div id="form_message" class="t2 section_text success_msg centered hidden">
+                            <picture class="success_icon">
+                                <source media="(min-width: 1200px)" srcset="assets/images/tick.png">
+                                <source media="(min-width: 768px)" srcset="assets/images/tick_medium.png">
+                                <source media="(max-width: 767px)" srcset="assets/images/tick_small.png">
+                                <img src="assets/images/tick.png" height="71" width="71">
+                            </picture>
+                            <p class="success_text">
+                                Thank you for submitting a talk, we'll be in touch soon!
+                            </p>
+                        </div>
+                        <div class="t2 centered">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="clover_right_white_bottom">
@@ -223,4 +253,26 @@
 
         </footer>
     </body>
+    <script lang="js">
+        const form = document.getElementById('submitTalk');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const data = new URLSearchParams();
+            for (const pair of new FormData(form)) {
+                data.append(pair[0], pair[1]);
+            }
+
+            let msg = document.getElementById('form_message');
+            msg.classList.remove("hidden");
+
+            fetch(form.action, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                },
+                body: data
+            })
+        })
+    </script>
 </html>

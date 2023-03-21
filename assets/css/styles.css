@@ -104,7 +104,6 @@ header {
     z-index: 10;
 }
 
-
 .star{
     position: absolute;
     left: 50%;
@@ -130,7 +129,7 @@ header {
     display: block;
     position: relative;
     background-color: #244638;
-    min-height: 600px;
+    min-height:500px;
     padding-bottom: 250px;
     padding-left: 30px;
     padding-right: 30px;
@@ -138,8 +137,6 @@ header {
 }
 
 .speakers {
-    display: block;
-    position: relative;
     background-color: #5C674D;
     min-height: 900px;
 }
@@ -170,14 +167,28 @@ header {
     z-index: 5;
 }
 
+section {
+    resize: vertical;
+}
+
+.speakers {
+    position: relative;
+}
+
+.speaker_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .section_content {
-    top: 50px;
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     margin-top: 100px;
+    resize: vertical;
     width: 100%;
 }
 
@@ -204,11 +215,15 @@ header {
     padding: 20px;
 }
 
+.hidden {
+    display: none;
+}
+
 .sponsors {
     display: block;
     position: relative;
     background-color: #244638;
-    min-height: 800px;
+    min-height: 600px;
     padding-bottom: 200px;
 }
 
@@ -219,7 +234,6 @@ header {
     font-size: 1.7rem;
     color: #9FCF33;
     line-height: 1em;
-
 }
 
 .sponsors_group {
@@ -291,6 +305,21 @@ header {
 }
 
 .subscribe {
+    z-index: 12;
+}
+
+.success_icon {
+    float: left;
+}
+
+.success_text {
+    float: right;
+    vertical-align: center;
+    line-height: 3em;
+    padding-left: 15px;
+}
+
+button {
     position: relative;
     background: #E28E33;
     color: #FFFEE6;
@@ -302,17 +331,69 @@ header {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
-    z-index: 12;
+    margin-bottom: 180px;
+}
+
+.success_msg {
+    color: #9FCF33;
 }
 
 .enter_email {
+    z-index: 12;
+}
+
+input {
     position: relative;
     border-radius: 15px;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-size: 1em;
     padding: 10px;
-    z-index: 12;
+    background: #FFFEE6;
+    margin-bottom: 15px;
+}
+
+textarea {
+    box-sizing: border-box;
+    border: 2px solid #FFFEE6;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    background: #FFFEE6;
+    padding: 10px;
+    width: 90%;
+    height: 300px;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+.t {
+    float: left;
+    margin-right: 50px;
+}
+.t2 {
+    flex-direction: row;
+    padding-top: 20px;
+}
+
+.t3 {
+    flex-direction: row;
+    padding-top: 20px;
+}
+
+.t3 > .t {
+    width: 100%;
+}
+.t3 > .t > input {
+    width: 90%;
+}
+
+.centered {
+    text-align: center;
+    justify-content: center;
 }
 
 footer {
@@ -338,7 +419,7 @@ footer {
         top: 190px;
     }
 
-    .enter_email {
+    .enter_email, input, textarea {
         width: 90%;
     }
 
@@ -365,5 +446,23 @@ footer {
 
     .sponsors {
         min-height: 400px;
+    }
+
+    .newsletter {
+        min-height: 700px;
+    }
+
+    .tt, .t2 {
+        padding: 0;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    textarea {
+        margin: 0;
+        margin-bottom: 20px;
     }
 }
