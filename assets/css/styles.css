@@ -141,6 +141,37 @@ header {
     min-height: 900px;
 }
 
+.code_of_conduct {
+    display: block;
+    position: relative;
+    background-color: #5C674D;
+    min-height: 300px;
+}
+
+.conduct_gopher {
+    position: relative;
+    display: block;
+    text-align: center
+}
+
+.code_of_conduct_content {
+    padding: 0;
+    padding-top: 50px;
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    resize: vertical;
+    width: 100%;
+    z-index: 99;
+}
+
+.code_of_conduct_contet_href {
+    color: #9FCF33;
+}
+
 .banner_sub_text {
     position: absolute;
     width: 100vw;
@@ -181,6 +212,15 @@ section {
     justify-content: center;
 }
 
+.sponsor_content {
+    padding-top: 50px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 99;
+}
+
 .section_content {
     position: absolute;
     display: flex;
@@ -202,6 +242,7 @@ section {
     line-height: 2em;
     letter-spacing: 5px;
     margin: 0 auto;
+    z-index: 99;
 }
 
 .section_text {
@@ -215,6 +256,10 @@ section {
     padding: 20px;
 }
 
+.section_text > p {
+    padding-bottom: 20px;
+}
+
 .hidden {
     display: none;
 }
@@ -224,7 +269,7 @@ section {
     position: relative;
     background-color: #244638;
     min-height: 600px;
-    padding-bottom: 200px;
+    padding-bottom: 40px;
 }
 
 .sponsors_levels {
@@ -302,6 +347,11 @@ section {
     left: auto;
     top: 0;
     bottom: auto;
+}
+
+.conduct_clover_top_left {
+    position: absolute;
+    top: -42px;
 }
 
 .subscribe {
@@ -398,6 +448,7 @@ textarea {
 
 .sponsors_group > a {
     margin-right: 30px;
+    padding-right: 40px;
 }
 
 footer {
@@ -414,9 +465,29 @@ footer {
     padding-top: 100px;
 }
 
+@media screen and (max-width: 1600px) {
+    .pigtails {
+        position: relative;
+        display: block;
+        text-align: center;
+        bottom: 0;
+        padding-bottom: 20px;
+    }
+}
+
+/*@media screen and (max-width: 1024px) {*/
+/*    .pigtails {*/
+/*        visibility: hidden;*/
+/*        left: -1000px;*/
+/*    }*/
+/*}*/
 @media screen and (max-width: 767px) {
     header {
         height: 600px;
+    }
+
+    .sponsor_content {
+        padding-top: 80px;
     }
 
     .gopher {
@@ -443,13 +514,20 @@ footer {
         visibility: hidden;
     }
 
-    .pigtails {
-        visibility: hidden;
-        left: -1000px;
-    }
-
     .sponsors {
         min-height: 400px;
+    }
+
+    .sponsors_group {
+        flex-direction: column;
+        padding-top: 0;
+        padding-top: 20px;
+    }
+
+    .sponsors_group > a {
+        margin-right: 0px;
+        padding-right: 0px;
+        padding-top: 42px;
     }
 
     .newsletter {
