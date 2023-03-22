@@ -486,6 +486,10 @@ footer {
         height: 600px;
     }
 
+    .section_heading {
+        font-size: 1.2em;
+    }
+
     .sponsor_content {
         padding-top: 80px;
     }
