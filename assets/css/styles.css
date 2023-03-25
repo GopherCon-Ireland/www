@@ -23,6 +23,19 @@ header {
     z-index: -10;
 }
 
+.guide_header {
+    display: block;
+    position: relative;
+    background-image: url("/assets/images/hero.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: clip;
+    background-color: #5C674D;
+    height: 600px;
+    z-index: -10;
+}
+
 .header_content {
     display: flex;
     flex-direction: column;
